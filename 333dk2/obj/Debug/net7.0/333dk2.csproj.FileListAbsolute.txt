@@ -1,0 +1,15 @@
+C:\Users\richard.nilsson\New folder (3)\333dk2\bin\Debug\net7.0\333dk2.exe
+C:\Users\richard.nilsson\New folder (3)\333dk2\bin\Debug\net7.0\333dk2.deps.json
+C:\Users\richard.nilsson\New folder (3)\333dk2\bin\Debug\net7.0\333dk2.runtimeconfig.json
+C:\Users\richard.nilsson\New folder (3)\333dk2\bin\Debug\net7.0\333dk2.dll
+C:\Users\richard.nilsson\New folder (3)\333dk2\bin\Debug\net7.0\333dk2.pdb
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.csproj.AssemblyReference.cache
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.AssemblyInfoInputs.cache
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.AssemblyInfo.cs
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.csproj.CoreCompileInputs.cache
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.dll
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\refint\333dk2.dll
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.pdb
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\333dk2.genruntimeconfig.cache
+C:\Users\richard.nilsson\New folder (3)\333dk2\obj\Debug\net7.0\ref\333dk2.dll
