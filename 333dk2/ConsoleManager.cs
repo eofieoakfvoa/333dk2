@@ -1,13 +1,8 @@
 //gör så den ritar ut från en dictionary ksk så att key vector2 t.ex 1,2 ska va ett i, kanske gör det lättare i framtiden?
 //▒ ser ut som bricks typ ■ pixel nästan? □, https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)
 
-using System.Collections.Specialized;
 using System.Diagnostics;
-using System.Diagnostics.Tracing;
 using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml.Schema;
 using System.Runtime.Versioning;
 
 [SupportedOSPlatform("windows")] // tar bort problem messages
