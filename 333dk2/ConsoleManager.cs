@@ -4,6 +4,7 @@
 using System.Diagnostics;
 using System.Numerics;
 using System.Runtime.Versioning;
+using System.Windows;
 
 [SupportedOSPlatform("windows")] // tar bort problem messages
 public static class ConsoleManager
@@ -17,7 +18,7 @@ public static class ConsoleManager
     private static string _currentScreen = "Console";
 
     //property för current screen så att när currentScreen ändras blir det också en hardclear på skärm canvasen 
-    public static string currentScreen
+    public static string CurrentScreen
     {
         get
         {
@@ -26,18 +27,19 @@ public static class ConsoleManager
         set
         {
             _currentScreen = value;
-            hardClear();
+            HardClear();
         }
     }
 
-    
-    public static void InitConsole()
+    public static void InitConsole(int windowsPixelWidth = 512, int windowsPixelHeight = 400)
     {
         //console använder rows, columns istället för pixlar därför behöver converta, pixelwidth/height inte perfekt men fungerar typ
-        int windowsPixelWidth = 512;
+
+    
         //--för någon anledning är max 1071 på en 1080 skärm?,,,,, 512 / 400
         // ifall man har 2+ skärmar tror den att resolutionen är bådas, lite knasigt
-        int windowsPixelHeight = 400;
+
+    
         int windowsWidth = (int)MathF.Floor(windowsPixelWidth / rowtopixelWidth);
         int windowsHeight = (int)MathF.Floor(windowsPixelHeight / rowtopixelHeight);
         Console.SetWindowSize(windowsWidth, windowsHeight);
@@ -48,7 +50,7 @@ public static class ConsoleManager
             for (int y = 0; y < windowsHeight; y++)
             {
                 Vector2 test = new(x, y);
-                Grid.Add(test, " ");
+                Grid.Add(test, string.Empty);
                 maxY = y;
             }
             maxX = x;
@@ -56,14 +58,14 @@ public static class ConsoleManager
 
     }
     //gör allt tomt dock borde jag nog ha en 1 border för att bordern ska var kvar
-    public static void hardClear()
+    private static void HardClear()
     {
         for (int x = 0; x < maxX; x++)
         {
             for (int y = 0; y < maxY; y++)
             {
                 Vector2 test = new(x, y);
-                Grid[test] = " ";
+                Grid[test] = string.Empty;
             }
         }
     }
@@ -121,20 +123,20 @@ public static class ConsoleManager
         return (textSplit[0], text1vector);
     }
 
-    public static void AddText(int textLine, string[] pivot)
+    public static void AddText(int textLine, string[] Pivot)
     {
         (string text, Vector2 location) = LoadText(textLine);
-        location = AddPivot(pivot, location);
+        location = AddPivot(Pivot, location);
         RenderText(text, location);
     }
 
     //------------=sprite=------------//    
     
-    public static void RenderSprite(int start, int end, int xOffset, int yOffset)
+    public static void RenderSprite(int Start, int End, int xOffset, int yOffset)
     {
         List<string> sprite = new();
         
-        for (int i = start; i <= end; i++)
+        for (int i = Start; i <= End; i++)
         {
             string Text = File.ReadLines(@"sprite.txt").ElementAtOrDefault(i);
             sprite.Add(Text);
@@ -152,12 +154,12 @@ public static class ConsoleManager
         }
     }
     //-------=något=-----//
-    public static Vector2 AddPivot(string[] locations, Vector2 Offset)
+    public static Vector2 AddPivot(string[] Locations, Vector2 Offset)
     {
     int x = maxX/2;
     int y = maxY/2;
     
-        foreach (string location in locations)
+        foreach (string location in Locations)
         {
             if (location == "Left")
                 x = 2; // +1 för att den längst till vänster ska existera +1 för border
