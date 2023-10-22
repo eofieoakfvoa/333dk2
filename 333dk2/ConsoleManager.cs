@@ -153,6 +153,10 @@ public static class ConsoleManager
             yOffset++;
         }
     }
+    public static void LoadSprite()
+    {
+
+    }
     //-------=något=-----//
     public static Vector2 AddPivot(string[] Locations, Vector2 Offset)
     {
